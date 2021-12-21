@@ -1456,7 +1456,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.12713788, y: 0.0000000034678669, z: -4.4450404e-10, w: 0.99188507}
+  m_LocalRotation: {x: 0.12713791, y: -0.000000029763198, z: 0.000000003814989, w: 0.99188507}
   m_LocalPosition: {x: -1.95, y: 2.83, z: -10.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2035,7 +2035,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754425945}
-  m_LocalRotation: {x: 0.12713788, y: 0.0000000034678669, z: -4.4450404e-10, w: 0.99188507}
+  m_LocalRotation: {x: 0.12713791, y: -0.000000029763198, z: 0.000000003814989, w: 0.99188507}
   m_LocalPosition: {x: -1.95, y: 2.83, z: -10.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2308,6 +2308,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   playerTr: {fileID: 0}
   monsterTr: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!4 &2124391365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3552745732908396002, guid: 9be0efb4fb92548038ca654538d272c6, type: 3}
