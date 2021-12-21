@@ -56,6 +56,8 @@ public class FireCtrl : MonoBehaviour
         //Quaternion.Euler(Vector3.forward * angle);
 
         // 스케일
+        float scale = Random.Range(1.0f, 3.0f);
+        muzzleFlash.transform.localScale = Vector3.one * scale; // new Vector3(scale, scale, scale)
 
         muzzleFlash.enabled = true;
         yield return new WaitForSeconds(0.2f);
