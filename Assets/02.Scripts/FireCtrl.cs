@@ -1,3 +1,5 @@
+#pragma warning disable IDE0051, CS0108
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +9,13 @@ public class FireCtrl : MonoBehaviour
     public Transform firePos;
     public GameObject bulletPrefab;
 
-    public AudioSource audio;
+    private AudioSource audio;
     public AudioClip fireSfx;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
