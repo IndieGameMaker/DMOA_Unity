@@ -28,4 +28,6 @@ public class RemoveBullet : MonoBehaviour
     OnCollisionEnter  1
     OnCollisionStay   n
     OnCollisionExit   1
+
+    OnTriggerEnter.
 */
