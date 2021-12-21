@@ -31,7 +31,7 @@ public class FireCtrl : MonoBehaviour
         //왼쪽 마우스 버튼을 클릭할 때마다
         if (Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f))
+            if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f, 1 << 8))
             {
                 Debug.Log(hit.collider.name);
             }
