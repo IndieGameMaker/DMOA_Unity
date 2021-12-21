@@ -30,7 +30,13 @@ public class MonsterCtrl : MonoBehaviour
     {
         if (playerTr == null) return;
 
-        agent.SetDestination(playerTr.position);
-        anim.SetBool("IsTrace", true);
+        float distance = Vector3.Distance(playerTr.position, monsterTr.position);
+
+        if (distance <= 10.0f)
+        {
+            agent.SetDestination(playerTr.position);
+            anim.SetBool("IsTrace", true);
+        }
+
     }
 }
