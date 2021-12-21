@@ -35,7 +35,13 @@ public class MonsterCtrl : MonoBehaviour
         if (distance <= 10.0f)
         {
             agent.SetDestination(playerTr.position);
+            agent.isStopped = false;
             anim.SetBool("IsTrace", true);
+        }
+        else
+        {
+            agent.isStopped = true;
+            anim.SetBool("IsTrace", false);
         }
 
     }
