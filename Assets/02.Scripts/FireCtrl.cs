@@ -23,8 +23,15 @@ public class FireCtrl : MonoBehaviour
         //왼쪽 마우스 버튼을 클릭할 때마다
         if (Input.GetMouseButtonDown(0))
         {
-            // Instantiate(생성할객체, 좌표, 회전)
-            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            Fire();
         }
+    }
+
+    void Fire()
+    {
+        // Instantiate(생성할객체, 좌표, 회전)
+        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        // 총소리 발생
+        audio.PlayOneShot(fireSfx, 0.8f);
     }
 }
