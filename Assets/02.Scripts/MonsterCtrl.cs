@@ -8,10 +8,12 @@ public class MonsterCtrl : MonoBehaviour
     public NavMeshAgent agent;
     public Transform playerTr; // 주인공 캐릭터의 Transform
     public Transform monsterTr;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
         playerTr = GameObject.FindGameObjectWithTag("PLAYER")?.GetComponent<Transform>();
@@ -29,5 +31,6 @@ public class MonsterCtrl : MonoBehaviour
         if (playerTr == null) return;
 
         agent.SetDestination(playerTr.position);
+        anim.SetBool("IsTrace", true);
     }
 }
