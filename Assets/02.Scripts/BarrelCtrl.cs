@@ -6,6 +6,13 @@ public class BarrelCtrl : MonoBehaviour
 {
     private int hitCount = 0;
 
+    public new MeshRenderer renderer;
+
+    void Start()
+    {
+        renderer = GetComponentInChildren<MeshRenderer>();
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         //if (coll.gameObject.tag == "BULLET")
