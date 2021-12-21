@@ -37,5 +37,15 @@ public class FireCtrl : MonoBehaviour
         Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         // 총소리 발생 : PlayOneShot = 소리를 중첩해서 발생
         audio.PlayOneShot(fireSfx, 0.8f);
+
+        // 코루틴 함수 실행
+        StartCoroutine(ShowMuzzleFlash());
+    }
+
+    IEnumerator ShowMuzzleFlash()
+    {
+        muzzleFlash.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        muzzleFlash.enabled = false;
     }
 }
