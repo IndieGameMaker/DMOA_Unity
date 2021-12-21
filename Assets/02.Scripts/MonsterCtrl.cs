@@ -26,6 +26,8 @@ public class MonsterCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerTr == null) return;
 
+        agent.SetDestination(playerTr.position);
     }
 }
