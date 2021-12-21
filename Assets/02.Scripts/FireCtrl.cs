@@ -49,6 +49,11 @@ public class FireCtrl : MonoBehaviour
         muzzleFlash.material.mainTextureOffset = offset;
 
         // 회전
+        // Quaternion 쿼터니언 (사원수) (x, y, z, w)
+        // 짐벌락(Gimbal Lock)
+        int angle = Random.Range(0, 360);
+        muzzleFlash.transform.localRotation = Quaternion.Euler(0, 0, angle);
+        //Quaternion.Euler(Vector3.forward * angle);
 
         // 스케일
 
