@@ -6,7 +6,10 @@ public class BarrelCtrl : MonoBehaviour
 {
     private int hitCount = 0;
 
+    [HideInInspector]
     public new MeshRenderer renderer;
+
+    public Texture[] textures;
 
     void Start()
     {
