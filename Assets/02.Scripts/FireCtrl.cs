@@ -24,6 +24,8 @@ public class FireCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(firePos.position, firePos.forward * 10.0f, Color.green);
+
         //왼쪽 마우스 버튼을 클릭할 때마다
         if (Input.GetMouseButtonDown(0))
         {
