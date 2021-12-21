@@ -11,10 +11,13 @@ public class FireCtrl : MonoBehaviour
 
     private AudioSource audio;
     public AudioClip fireSfx;
+    public MeshRenderer muzzleFlash;
 
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        muzzleFlash = firePos.gameObject.GetComponentInChildren<MeshRenderer>();
+        //muzzleFlash = firePos.Find("MuzzleFlash").GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class FireCtrl : MonoBehaviour
     {
         // Instantiate(생성할객체, 좌표, 회전)
         Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-        // 총소리 발생
+        // 총소리 발생 : PlayOneShot = 소리를 중첩해서 발생
         audio.PlayOneShot(fireSfx, 0.8f);
     }
 }
